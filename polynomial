@@ -1,0 +1,14 @@
+import numpy aa np
+def poly(a,dg):
+  aq=np.zeros((a.shape[0],a.shape[1]*dg))
+  d=0
+  for i in range(a.shape[1]:
+    cq=a[:i]
+    t=np.zeros((a.shape[0],dg))
+    for d in range(dg):
+      t[:,d]=cq**(d+1)
+    aq[:,d:d+dg]=t
+    d+=dg
+  A=np.ones((aq.shape[0],aq.shape[1]+1))
+  A[:,1:]=aq
+  return A
